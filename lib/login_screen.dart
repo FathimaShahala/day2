@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 50,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(8),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -65,33 +65,47 @@ class _LoginScreenState extends State<LoginScreen> {
                           borderRadius:
                               BorderRadius.only(topLeft: Radius.circular(90))),
                       child: Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(40),
                         child: Column(
                           children: <Widget>[
                             const SizedBox(
-                              height: 15,
+                              height: 30,
                             ),
                             FadeInUp(
                                 duration: const Duration(milliseconds: 1),
                                 child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white38,
-                                    borderRadius: BorderRadius.circular(50),
-                                  ),
                                   child: Column(
                                     children: <Widget>[
                                       Container(
-                                        child: const Text("Login",
-                                            style: TextStyle(
-                                                fontSize: 40,
-                                                fontStyle: FontStyle.normal,
-                                                color: Colors.black,
-                                                fontWeight: FontWeight.bold)),
+                                        child: const Center(
+                                          child: Text("Login",
+                                              style: TextStyle(
+                                                  fontSize: 30,
+                                                  fontStyle: FontStyle.normal,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
                                       ),
-                                      const SizedBox(height: 10),
+                                      const SizedBox(height: 40),
                                       Container(
-                                        padding: const EdgeInsets.all(10),
+                                        decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(10),
+                                                bottomLeft: Radius.circular(10),
+                                                bottomRight:
+                                                    Radius.circular(10)),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.grey,
+                                                offset: Offset(-1, -1),
+                                                blurRadius: 1,
+                                              ),
+                                            ]),
+                                        padding: const EdgeInsets.all(5),
                                         child: TextFormField(
+                                          keyboardType:
+                                              TextInputType.emailAddress,
                                           decoration: const InputDecoration(
                                               label: Text("Email"),
                                               labelStyle: TextStyle(
@@ -100,26 +114,44 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   "vijaybhuva90@gmail.com",
                                               hintStyle: TextStyle(
                                                   color: Colors.grey,
-                                                  fontSize: 10),
+                                                  fontSize: 15),
                                               border: InputBorder.none),
                                           validator: validateEmail,
                                           autovalidateMode: AutovalidateMode
                                               .onUserInteraction,
                                         ),
                                       ),
-                                      const SizedBox(height: 10),
+                                      const SizedBox(
+                                        height: 30,
+                                      ),
                                       Container(
-                                        padding: const EdgeInsets.all(10),
+                                        decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(10),
+                                                bottomLeft: Radius.circular(10),
+                                                bottomRight:
+                                                    Radius.circular(10)),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.grey,
+                                                offset: Offset(-1, -1),
+                                                blurRadius: 1,
+                                              ),
+                                            ]),
+                                        padding: const EdgeInsets.all(5),
                                         child: TextFormField(
+                                          keyboardType: TextInputType.number,
                                           obscureText: passwordObscured,
                                           decoration: InputDecoration(
                                             label: const Text("Password"),
                                             labelStyle: const TextStyle(
                                                 color: Colors.black),
-                                            hintText: ".......",
+                                            hintText: ". . . . . . .",
                                             hintStyle: const TextStyle(
                                                 color: Colors.grey,
-                                                fontSize: 50),
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w900),
                                             border: InputBorder.none,
                                             suffixIcon: togglePassword(),
                                           ),
@@ -136,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 )),
                             const SizedBox(
-                              height: 50,
+                              height: 40,
                             ),
                             FadeInUp(
                                 duration: const Duration(milliseconds: 1),
@@ -159,13 +191,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                     }
                                   },
                                   height: 50,
-
                                   color: Colors.black,
-                                  shape: RoundedRectangleBorder(
+                                  shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        bottomLeft: Radius.circular(15),
-                                        bottomRight: Radius.circular(15)),
+                                        topLeft: Radius.circular(10),
+                                        bottomLeft: Radius.circular(10),
+                                        bottomRight: Radius.circular(10)),
                                   ),
                                   // decoration: BoxDecoration(
                                   // ),
@@ -175,18 +206,20 @@ class _LoginScreenState extends State<LoginScreen> {
                                       "Login",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.w600),
+                                          fontWeight: FontWeight.normal),
                                     ),
                                   ),
                                 )),
                             const SizedBox(
-                              height: 50,
+                              height: 60,
                             ),
                             FadeInUp(
                                 duration: const Duration(milliseconds: 1),
                                 child: const Text(
                                   "Don't have any account? Sign Up",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w900),
                                 )),
                           ],
                         ),
@@ -212,6 +245,8 @@ class _LoginScreenState extends State<LoginScreen> {
       icon: passwordObscured
           ? Icon(Icons.visibility)
           : Icon(Icons.visibility_off),
+      iconSize: 15,
+      alignment: Alignment.bottomRight,
       color: Colors.grey,
     );
   }

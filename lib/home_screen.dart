@@ -16,28 +16,28 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationScreen(),
+      bottomNavigationBar: const BottomNavigationScreen(),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: ListView(
-            children: [
-              CustomAppBar(),
-              SizedBox(
-                height: 5,
-              ),
-              SearchBar(),
-              SizedBox(
-                height: 5,
-              ),
-              Category(),
-              SizedBox(
-                height: 5,
-              ),
-              Container(height: 900, child: RecentProducts()),
-            ],
-          ),
+        //  child: Padding(
+        // padding: const EdgeInsets.all(1),
+        child: ListView(
+          children: [
+            CustomAppBar(),
+            SizedBox(
+              height: 2,
+            ),
+            SearchBar(),
+            SizedBox(
+              height: 2,
+            ),
+            Category(),
+            SizedBox(
+              height: 2,
+            ),
+            RecentProducts(),
+          ],
         ),
+        // ),
       ),
       drawer: const Drawer(),
     );

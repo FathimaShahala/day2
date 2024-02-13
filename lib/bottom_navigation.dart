@@ -1,8 +1,5 @@
-import 'package:day2/account_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:day2/home_screen.dart';
-import 'package:day2/cart_screen.dart';
-import 'package:day2/notification_screen.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class BottomNavigationScreen extends StatelessWidget {
   const BottomNavigationScreen({
@@ -12,55 +9,49 @@ class BottomNavigationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 14),
       decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
+            topLeft: Radius.circular(40),
+            topRight: Radius.circular(40),
           ),
           boxShadow: [
             BoxShadow(
               color: Colors.grey,
-              offset: Offset(0, -15),
-              blurRadius: 30,
+              offset: Offset(0, -1),
+              blurRadius: 20,
             ),
           ]),
-      child: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.home_filled),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.shopping_cart_rounded),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CartScreen()));
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.notifications_sharp),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => NotificationScreen()));
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.account_box_outlined),
-              //icon:SvgPicture.asset('assets/prof.webp'),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AccountScreen()));
-              },
-            ),
+      child: const Padding(
+        padding: EdgeInsets.all(10),
+        child: GNav(
+          backgroundColor: Colors.transparent,
+          color: Colors.black,
+          activeColor: Colors.black,
+          tabBackgroundColor: Colors.grey,
+          gap: 10,
+          padding: EdgeInsets.all(20),
+          tabs: [
+            GButton(
+                icon: Icons.home_filled,
+                iconSize: 20,
+                text: 'Home',
+                textSize: 15),
+            GButton(
+                icon: Icons.shopping_cart_rounded,
+                iconSize: 20,
+                text: 'Cart',
+                textSize: 15),
+            GButton(
+                icon: Icons.notifications_rounded,
+                iconSize: 20,
+                text: 'Notification',
+                textSize: 15),
+            GButton(
+                icon: Icons.account_circle_outlined,
+                iconSize: 20,
+                text: 'Profile',
+                textSize: 15),
           ],
         ),
       ),

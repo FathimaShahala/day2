@@ -8,7 +8,7 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(20),
       child: Column(
         children: [
           Row(
@@ -19,20 +19,29 @@ class SearchBar extends StatelessWidget {
                     color: Colors.grey.shade300,
                     borderRadius: BorderRadius.circular(30),
                     boxShadow: [
-                      BoxShadow(color: Colors.grey.shade200, blurRadius: 4)
+                      BoxShadow(color: Colors.grey.shade50, blurRadius: 4)
                     ]),
-                child: const TextField(
+                child: TextField(
                   decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical: 14),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                    contentPadding: EdgeInsets.symmetric(vertical: 14),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                    ),
+                    hintText: 'Search...',
+                    hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+                    prefixIcon: Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Image.asset(
+                        'assets/search.png',
+                        width: 10,
+                        height: 10,
+                        // fit: BoxFit.fill,
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                      ),
-                      hintText: 'Search...',
-                      hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
-                      prefixIcon: Icon((Icons.search))),
+                    ),
+                  ),
                 ),
               )),
               const SizedBox(width: 20),
@@ -41,8 +50,10 @@ class SearchBar extends StatelessWidget {
                     color: Colors.black87,
                     borderRadius: BorderRadius.circular(30)),
                 child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(color: Colors.white, Icons.sort_rounded)),
+                  onPressed: () {},
+                  icon: Image.asset('assets/filter.png'),
+                  iconSize: 30,
+                ),
               )
             ],
           )
