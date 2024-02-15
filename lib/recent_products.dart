@@ -40,7 +40,7 @@ class RecentProducts extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: SizedBox(
-        height: 1500,
+        height: 1150,
         child: GridView.builder(
             shrinkWrap: true,
             itemCount: 6,
@@ -97,7 +97,7 @@ class RecentProducts extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(height: 3.0),
+                        SizedBox(height: 12),
                         Text(
                           productListName[index],
                           style: TextStyle(fontWeight: FontWeight.bold),
