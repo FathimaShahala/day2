@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class RecentProducts extends StatelessWidget {
   List productListImage = [
-    'assets/pic6.jpg',
+    'assets/pic1.jpg',
     'assets/pic5.webp',
+    'assets/pic6.jpg',
     'assets/pic4.jpeg',
+    'assets/pic5.webp',
     'assets/pic6.jpg',
   ];
   List productListName = [
@@ -12,18 +14,24 @@ class RecentProducts extends StatelessWidget {
     'White Tees',
     'Theory ',
     'Roller Rabbit',
+    'White Tees',
+    'Theory ',
   ];
   List productListDisc = [
     'Vado Odello Dress',
     'Bubble Elastic T-shirt',
     'Irregular Rib Skirt',
     'Vado Odello Dress',
+    'Bubble Elastic T-shirt',
+    'Irregular Rib Skirt',
   ];
   List productListPrice = [
     '\$198.00',
     '\$50.00',
     '\$345.00',
     '\$198.00',
+    '\$510.00',
+    '\$150.00',
   ];
 
   @override
@@ -32,10 +40,10 @@ class RecentProducts extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: SizedBox(
-        height: 2000,
+        height: 1500,
         child: GridView.builder(
             shrinkWrap: true,
-            itemCount: 4,
+            itemCount: 6,
             physics:
                 const BouncingScrollPhysics(parent: ClampingScrollPhysics()),
             scrollDirection: Axis.vertical,
