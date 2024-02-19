@@ -23,17 +23,18 @@ class SearchBar extends StatelessWidget {
                     ]),
                 child: TextField(
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical: 14),
-                    enabledBorder: OutlineInputBorder(
+                    contentPadding: const EdgeInsets.symmetric(vertical: 14),
+                    enabledBorder: const OutlineInputBorder(
                       borderSide: BorderSide.none,
                     ),
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide.none,
                     ),
                     hintText: 'Search...',
-                    hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+                    hintStyle:
+                        const TextStyle(color: Colors.grey, fontSize: 15),
                     prefixIcon: Padding(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: Image.asset(
                         'assets/search.png',
                         width: 10,

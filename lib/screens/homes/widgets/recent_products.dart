@@ -40,7 +40,7 @@ class RecentProducts extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: SizedBox(
-        height: 1150,
+        height: 1120,
         child: GridView.builder(
             shrinkWrap: true,
             itemCount: 6,
@@ -52,7 +52,6 @@ class RecentProducts extends StatelessWidget {
               mainAxisSpacing: 4,
               crossAxisSpacing: 4,
               childAspectRatio: 0.5,
-              // mainAxisExtent: MediaQuery.of(context).size.height/2
             ),
             itemBuilder: (context, index) {
               return Container(
@@ -97,18 +96,18 @@ class RecentProducts extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(height: 12),
+                        const SizedBox(height: 12),
                         Text(
                           productListName[index],
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Text(
                           productListDisc[index],
-                          style: TextStyle(color: Colors.grey),
+                          style: const TextStyle(color: Colors.grey),
                         ),
                         Text(
                           productListPrice[index],
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         )
                       ],
                     ),

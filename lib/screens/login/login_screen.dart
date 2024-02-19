@@ -1,9 +1,11 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:day2/home_screen.dart';
+import 'package:day2/navigation/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -181,7 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  HomeScreen()));
+                                                  BottomNavigationScreen()));
                                     } else {
                                       Fluttertoast.showToast(
                                           msg:
@@ -198,9 +200,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                         bottomLeft: Radius.circular(10),
                                         bottomRight: Radius.circular(10)),
                                   ),
-                                  // decoration: BoxDecoration(
-                                  // ),
-
                                   child: const Center(
                                     child: Text(
                                       "Login",
@@ -243,8 +242,8 @@ class _LoginScreenState extends State<LoginScreen> {
         });
       },
       icon: passwordObscured
-          ? Icon(Icons.visibility)
-          : Icon(Icons.visibility_off),
+          ? const Icon(Icons.visibility)
+          : const Icon(Icons.visibility_off),
       iconSize: 15,
       alignment: Alignment.bottomRight,
       color: Colors.grey,

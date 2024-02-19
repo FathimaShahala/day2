@@ -10,9 +10,9 @@ class Category extends StatefulWidget {
 class _CategoryState extends State<Category> {
   List<String> items = [
     "Dresses",
-    "Jacket",
+    "Jackets",
     "Jeans",
-    "Sockes",
+    "Shoes",
   ];
 
   int current = 0;
@@ -39,7 +39,6 @@ class _CategoryState extends State<Category> {
                           });
                         },
                         child: Container(
-                          // duration: const Duration(milliseconds: 1),
                           margin: const EdgeInsets.all(10),
                           width: 75,
                           height: 35,
@@ -60,7 +59,7 @@ class _CategoryState extends State<Category> {
                                 Text(
                                   items[index],
                                   style: TextStyle(
-                                    fontWeight: FontWeight.normal,
+                                    fontWeight: FontWeight.w600,
                                     color: current == index
                                         ? Colors.white
                                         : Colors.black,

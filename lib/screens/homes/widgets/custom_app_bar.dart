@@ -1,4 +1,3 @@
-import 'package:day2/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -18,14 +17,10 @@ class CustomAppBar extends StatelessWidget {
                 color: Colors.black87, borderRadius: BorderRadius.circular(30)),
             child: Builder(
               builder: (context) => IconButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
+                onPressed: () {},
                 icon: Image.asset('assets/menu.png'),
                 iconSize: 5,
               ),
-              //const Icon(color: Colors.white, Icons.menu_rounded)),
             ),
           ),
           CircleAvatar(

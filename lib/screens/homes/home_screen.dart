@@ -1,9 +1,9 @@
-import 'package:day2/bottom_navigation.dart';
-import 'package:day2/recent_products.dart';
+//import 'package:day2/bottom_navigation.dart';
+import 'package:day2/homes/widgets/recent_products.dart';
 import 'package:flutter/material.dart';
-import 'package:day2/custom_app_bar.dart';
-import 'package:day2/search_bar.dart';
-import 'package:day2/category.dart';
+import 'package:day2/homes/widgets/custom_app_bar.dart';
+import 'package:day2/homes/widgets/search_bar.dart';
+import 'package:day2/homes/widgets/category.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,22 +16,21 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const BottomNavigationScreen(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(1),
           child: ListView(
             children: [
-              CustomAppBar(),
-              SizedBox(
+              const CustomAppBar(),
+              const SizedBox(
                 height: 2,
               ),
-              SearchBar(),
-              SizedBox(
+              const SearchBar(),
+              const SizedBox(
                 height: 2,
               ),
-              Category(),
-              SizedBox(
+              const Category(),
+              const SizedBox(
                 height: 2,
               ),
               RecentProducts(),

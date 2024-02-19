@@ -37,7 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   animate_do: ^3.0.2
   fluttertoast: ^8.0.2
-  google_nav_bar: ^5.0.6
 
 
 dev_dependencies:
@@ -74,8 +73,6 @@ flutter:
     - assets/icon1.jpeg
     - assets/prof.webp
     - assets/pic1.jpg
-    - assets/pic2.webp
-    - assets/pic3.png
     - assets/pic4.jpeg
     - assets/pic5.webp
     - assets/pic6.jpg
