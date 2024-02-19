@@ -1,9 +1,8 @@
-//import 'package:day2/bottom_navigation.dart';
-import 'package:day2/homes/widgets/recent_products.dart';
+import 'package:day2/screens/homes/widgets/recent_products.dart';
 import 'package:flutter/material.dart';
-import 'package:day2/homes/widgets/custom_app_bar.dart';
-import 'package:day2/homes/widgets/search_bar.dart';
-import 'package:day2/homes/widgets/category.dart';
+import 'package:day2/screens/homes/widgets/custom_app_bar.dart';
+import 'package:day2/screens/homes/widgets/search_bar.dart';
+import 'package:day2/screens/homes/widgets/category.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

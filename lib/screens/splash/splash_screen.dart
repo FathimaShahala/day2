@@ -1,4 +1,4 @@
-import 'package:day2/login/login_screen.dart';
+import 'package:day2/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

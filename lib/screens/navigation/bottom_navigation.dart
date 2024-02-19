@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:day2/homes/home_screen.dart';
-import 'package:day2/pages/cart/cart.dart';
-import 'package:day2/pages/notifys/notifys.dart';
-import 'package:day2/pages/account/account.dart';
+import 'package:day2/screens/homes/home_screen.dart';
+import 'package:day2/screens/pages/cart/cart.dart';
+import 'package:day2/screens/pages/notifys/notifys.dart';
+import 'package:day2/screens/pages/account/account.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({super.key});
