@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         FadeInUp(
                           duration: const Duration(milliseconds: 1),
                           child: const Image(
-                            image: AssetImage("assets/icon.png"),
+                            image: AssetImage("assets/images/login_logo.png"),
                             width: 60,
                             height: 60,
                           ),

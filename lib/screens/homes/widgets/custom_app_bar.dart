@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
             child: Builder(
               builder: (context) => IconButton(
                 onPressed: () {},
-                icon: Image.asset('assets/menu.png'),
+                icon: Image.asset('assets/images/ic_menu.png'),
                 iconSize: 5,
               ),
             ),
@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget {
               width: 45,
               height: 45,
               child: ClipOval(
-                child: Image.asset("assets/prof.webp"),
+                child: Image.asset("assets/images/profile.webp"),
               ),
             ),
           ),

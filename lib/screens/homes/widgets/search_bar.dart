@@ -36,7 +36,7 @@ class SearchBar extends StatelessWidget {
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Image.asset(
-                        'assets/search.png',
+                        'assets/images/ic_search.png',
                         width: 10,
                         height: 10,
                         // fit: BoxFit.fill,
@@ -52,7 +52,7 @@ class SearchBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30)),
                 child: IconButton(
                   onPressed: () {},
-                  icon: Image.asset('assets/filter.png'),
+                  icon: Image.asset('assets/images/ic_filter.png'),
                   iconSize: 30,
                 ),
               )

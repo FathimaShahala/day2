@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class RecentProducts extends StatelessWidget {
   List productListImage = [
-    'assets/pic1.jpg',
-    'assets/pic5.webp',
-    'assets/pic6.jpg',
-    'assets/pic4.jpeg',
-    'assets/pic5.webp',
-    'assets/pic6.jpg',
+    'assets/images/product_1.jpg',
+    'assets/images/product_2.jpeg',
+    'assets/images/product_3.webp',
+    'assets/images/product_4.jpg',
+    'assets/images/product_1.jpg',
+    'assets/images/product_2.jpeg',
   ];
   List productListName = [
     'Roller Rabbit',
