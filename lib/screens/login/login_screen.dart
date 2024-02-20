@@ -1,5 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:day2/screens/navigation/bottom_navigation.dart';
+import 'package:day2/utils/custom_textfield.dart';
+import 'package:day2/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -13,15 +15,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _form = GlobalKey<FormState>();
   bool passwordObscured = true;
-  String? validateEmail(String? email) {
-    RegExp emailRegex = RegExp(
-        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-    final isEmailValid = emailRegex.hasMatch(email ?? '');
-    if (!isEmailValid) {
-      return 'Please enter a valid email';
-    }
-    return null;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,82 +82,32 @@ class _LoginScreenState extends State<LoginScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 40),
-                                      Container(
-                                        decoration: const BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(10),
-                                                bottomLeft: Radius.circular(10),
-                                                bottomRight:
-                                                    Radius.circular(10)),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.grey,
-                                                offset: Offset(-1, -1),
-                                                blurRadius: 1,
-                                              ),
-                                            ]),
-                                        padding: const EdgeInsets.all(5),
-                                        child: TextFormField(
-                                          keyboardType:
-                                              TextInputType.emailAddress,
-                                          decoration: const InputDecoration(
-                                              label: Text("Email"),
-                                              labelStyle: TextStyle(
-                                                  color: Colors.black),
-                                              hintText:
-                                                  "vijaybhuva90@gmail.com",
-                                              hintStyle: TextStyle(
-                                                  color: Colors.grey,
-                                                  fontSize: 15),
-                                              border: InputBorder.none),
-                                          validator: validateEmail,
-                                          autovalidateMode: AutovalidateMode
-                                              .onUserInteraction,
-                                        ),
+                                      CustomTextField(
+                                        //obscureText: true,
+                                        keyboardType:
+                                            TextInputType.emailAddress,
+                                        label: "Email",
+                                        hintText: 'vijaybhuva90@gmail.com',
+                                        suffixIcon: null,
+                                        validator: (val) {
+                                          if (!val!.isValidEmail) {
+                                            return 'Enter a valid email';
+                                          }
+                                          return null;
+                                        },
                                       ),
                                       const SizedBox(
-                                        height: 30,
+                                        height: 40,
                                       ),
-                                      Container(
-                                        decoration: const BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.only(
-                                                topLeft: Radius.circular(10),
-                                                bottomLeft: Radius.circular(10),
-                                                bottomRight:
-                                                    Radius.circular(10)),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: Colors.grey,
-                                                offset: Offset(-1, -1),
-                                                blurRadius: 1,
-                                              ),
-                                            ]),
-                                        padding: const EdgeInsets.all(5),
-                                        child: TextFormField(
-                                          keyboardType: TextInputType.number,
-                                          obscureText: passwordObscured,
-                                          decoration: InputDecoration(
-                                            label: const Text("Password"),
-                                            labelStyle: const TextStyle(
-                                                color: Colors.black),
-                                            hintText: ". . . . . . .",
-                                            hintStyle: const TextStyle(
-                                                color: Colors.grey,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w900),
-                                            border: InputBorder.none,
-                                            suffixIcon: togglePassword(),
-                                          ),
-                                          validator: (password) => password!
-                                                      .length <
-                                                  8
-                                              ? 'Password should be at least 7 characters'
-                                              : null,
-                                          autovalidateMode: AutovalidateMode
-                                              .onUserInteraction,
-                                        ),
+                                      CustomTextField(
+                                        obscureText: passwordObscured,
+                                        keyboardType: TextInputType.number,
+                                        label: "Password",
+                                        hintText: '. . . . . .',
+                                        suffixIcon: togglePassword(),
+                                        validator: (val) => val!.length < 5
+                                            ? 'Password should be at least 6 characters'
+                                            : null,
                                       ),
                                     ],
                                   ),
@@ -239,6 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
       onPressed: () {
         setState(() {
           passwordObscured = !passwordObscured;
+          // print(passwordObscured);
         });
       },
       icon: passwordObscured
