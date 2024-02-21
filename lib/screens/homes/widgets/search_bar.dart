@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:day2/utils/app_images.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({
@@ -36,10 +37,9 @@ class SearchBar extends StatelessWidget {
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Image.asset(
-                        'assets/images/ic_search.png',
+                        AppImages.search,
                         width: 10,
                         height: 10,
-                        // fit: BoxFit.fill,
                       ),
                     ),
                   ),
@@ -50,10 +50,10 @@ class SearchBar extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.black87,
                     borderRadius: BorderRadius.circular(30)),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Image.asset('assets/images/ic_filter.png'),
-                  iconSize: 30,
+                child: Image.asset(
+                  AppImages.filter,
+                  height: 45,
+                  width: 45,
                 ),
               )
             ],

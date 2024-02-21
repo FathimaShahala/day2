@@ -4,6 +4,7 @@ import 'package:day2/utils/custom_textfield.dart';
 import 'package:day2/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:day2/utils/app_images.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -41,13 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        FadeInUp(
-                          duration: const Duration(milliseconds: 1),
-                          child: const Image(
-                            image: AssetImage("assets/images/login_logo.png"),
-                            width: 60,
-                            height: 60,
-                          ),
+                        Image.asset(
+                          AppImages.loginLogo,
+                          width: 60,
+                          height: 60,
                         ),
                       ],
                     ),

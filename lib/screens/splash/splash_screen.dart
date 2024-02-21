@@ -1,6 +1,7 @@
 import 'package:day2/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:day2/utils/app_images.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -42,10 +43,9 @@ class _SplashScreenState extends State<SplashScreen>
                 end: Alignment.bottomLeft)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Image(
-              image: AssetImage("assets/images/logo.jpeg"),
-              //   image: AssetImage("assets/images/logo.jpeg"),
+          children: [
+            Image.asset(
+              AppImages.logo,
               width: 120,
               height: 120,
             ),

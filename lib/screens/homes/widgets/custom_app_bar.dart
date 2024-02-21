@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:day2/utils/app_images.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -16,12 +17,20 @@ class CustomAppBar extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.black87, borderRadius: BorderRadius.circular(30)),
             child: Builder(
-              builder: (context) => IconButton(
-                onPressed: () {},
-                icon: Image.asset('assets/images/ic_menu.png'),
-                iconSize: 5,
+              builder: (context) => Image.asset(
+                AppImages.menu,
+                height: 45,
+                width: 45,
               ),
             ),
+
+            //IconButton(
+            // onPressed: () {},
+
+            //  icon: Image.asset('assets/images/ic_menu.png'),
+            //iconSize: 5,
+            // ),
+            // ),
           ),
           CircleAvatar(
             radius: 25,
@@ -30,7 +39,9 @@ class CustomAppBar extends StatelessWidget {
               width: 45,
               height: 45,
               child: ClipOval(
-                child: Image.asset("assets/images/profile.webp"),
+                child: Image.asset(
+                  AppImages.profile,
+                ),
               ),
             ),
           ),

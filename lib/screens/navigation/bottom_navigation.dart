@@ -3,6 +3,7 @@ import 'package:day2/screens/homes/home_screen.dart';
 import 'package:day2/screens/pages/cart/cart.dart';
 import 'package:day2/screens/pages/notifys/notifys.dart';
 import 'package:day2/screens/pages/account/account.dart';
+import 'package:day2/utils/app_images.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({super.key});
@@ -141,11 +142,17 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     );
   }
 
-  List listOfimages = [
-    "assets/images/ic_home.png",
+  List<String> listOfimages = [
+    AppImages.home,
+    AppImages.cart,
+    AppImages.notifys,
+    AppImages.account,
+
+    /* "assets/images/ic_home.png",
     "assets/images/ic_cart.png",
     "assets/images/ic_bell.png",
     "assets/images/ic_account.png",
+    */
   ];
   List<String> listOfStrings = [
     'Home',
