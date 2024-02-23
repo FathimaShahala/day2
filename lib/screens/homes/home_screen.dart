@@ -1,3 +1,6 @@
+/*
+
+
 import 'package:day2/screens/homes/widgets/recent_products.dart';
 import 'package:flutter/material.dart';
 import 'package:day2/screens/homes/widgets/custom_app_bar.dart';
@@ -42,3 +45,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+*/

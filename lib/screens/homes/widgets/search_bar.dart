@@ -12,7 +12,7 @@ class SliverSearchBar extends StatelessWidget {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       automaticallyImplyLeading: false,
       elevation: 0,
-      pinned: false,
+      pinned: true,
       bottom: const PreferredSize(
           preferredSize: Size.fromHeight(15),
           child: SizedBox(
