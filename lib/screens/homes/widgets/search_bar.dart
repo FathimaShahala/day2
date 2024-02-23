@@ -1,6 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:day2/utils/app_images.dart';
 
+class SliverSearchBar extends StatelessWidget {
+  const SliverSearchBar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverAppBar(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      automaticallyImplyLeading: false,
+      elevation: 0,
+      pinned: false,
+      bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(15),
+          child: SizedBox(
+            height: 2,
+          )),
+      flexibleSpace: const SearchBar(),
+    );
+  }
+}
+
 class SearchBar extends StatelessWidget {
   const SearchBar({
     super.key,

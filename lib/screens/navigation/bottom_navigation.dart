@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:day2/screens/homes/home_screen.dart';
+import 'package:day2/screens/homes/sliver_home_screen.dart';
 import 'package:day2/screens/pages/cart/cart.dart';
 import 'package:day2/screens/pages/notifys/notifys.dart';
 import 'package:day2/screens/pages/account/account.dart';
@@ -16,7 +16,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   var _selectedIndex = 0;
 
   List<Widget> buildscreens = [
-    const HomeScreen(),
+    const SliverHomeScreen(),
     const Cart(),
     const Notifys(),
     const Account()

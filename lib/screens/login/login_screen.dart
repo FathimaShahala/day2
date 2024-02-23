@@ -1,10 +1,9 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:day2/screens/navigation/bottom_navigation.dart';
 import 'package:day2/utils/custom_textfield.dart';
 import 'package:day2/utils/extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:day2/utils/app_images.dart';
+import 'package:day2/utils/primary_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -115,41 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             FadeInUp(
                                 duration: const Duration(milliseconds: 1),
-                                child: MaterialButton(
-                                  onPressed: () {
-                                    final isValid =
-                                        _form.currentState!.validate();
-                                    if (isValid) {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  BottomNavigationScreen()));
-                                    } else {
-                                      Fluttertoast.showToast(
-                                          msg:
-                                              "Username / Password is Incorrect",
-                                          gravity: ToastGravity.SNACKBAR,
-                                          fontSize: 16.0);
-                                    }
-                                  },
-                                  height: 50,
-                                  color: Colors.black,
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(10),
-                                        bottomLeft: Radius.circular(10),
-                                        bottomRight: Radius.circular(10)),
-                                  ),
-                                  child: const Center(
-                                    child: Text(
-                                      "Login",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.normal),
-                                    ),
-                                  ),
-                                )),
+                                child: PrimaryButton(form: _form)),
                             const SizedBox(
                               height: 60,
                             ),
