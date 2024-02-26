@@ -42,10 +42,11 @@ class RecentProduct extends StatelessWidget {
     //  delegate: SliverChildBuilderDelegate(
      //   (BuildContext context, int index) {
           return Padding(
-            padding: const EdgeInsets.all(20),
-            //child: SizedBox(
-              //height: 1150,
+            padding: const EdgeInsets.symmetric(),
+            child: SizedBox(
+              //height: 1200,
               child: GridView.builder(
+                  primary: false,
                   shrinkWrap: true,
                   itemCount: 6,
                   physics: const BouncingScrollPhysics(
@@ -122,7 +123,7 @@ class RecentProduct extends StatelessWidget {
                       ),
                     );
                   }),
-            //),
+            ),
           );
        // },
      // ),
