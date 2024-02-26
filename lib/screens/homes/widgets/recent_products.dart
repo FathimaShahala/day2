@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:day2/utils/app_images.dart';
 
-class SliverRecentProduct extends StatelessWidget {
+class RecentProduct extends StatelessWidget {
   List productListImage = [
     AppImages.product1,
     AppImages.product2,
@@ -38,13 +38,13 @@ class SliverRecentProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-    return SliverList(
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
+   // return SliverList(
+    //  delegate: SliverChildBuilderDelegate(
+     //   (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.all(20),
-            child: SizedBox(
-              height: 1150,
+            //child: SizedBox(
+              //height: 1150,
               child: GridView.builder(
                   shrinkWrap: true,
                   itemCount: 6,
@@ -122,10 +122,10 @@ class SliverRecentProduct extends StatelessWidget {
                       ),
                     );
                   }),
-            ),
+            //),
           );
-        },
-      ),
-    );
+       // },
+     // ),
+   // );
   }
 }

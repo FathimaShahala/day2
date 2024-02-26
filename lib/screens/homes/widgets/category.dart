@@ -1,27 +1,5 @@
 import 'package:flutter/material.dart';
 
-class SliverCategory extends StatelessWidget {
-  const SliverCategory({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SliverAppBar(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      automaticallyImplyLeading: false,
-      elevation: 0,
-      pinned: false,
-      bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(15),
-          child: SizedBox(
-            height: 2,
-          )),
-      flexibleSpace: const Category(),
-    );
-  }
-}
-
 class Category extends StatefulWidget {
   const Category({Key? key}) : super(key: key);
 
