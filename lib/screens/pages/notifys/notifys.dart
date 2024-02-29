@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:day2/screens/pages/notifys/notifys_details_screen.dart';
-import 'package:day2/utils/model_products.dart';
+import 'package:day2/models/model_products.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 

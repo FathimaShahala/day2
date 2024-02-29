@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:day2/utils/model_album.dart';
+import 'package:day2/models/model_album.dart';
 
 
 class Cart extends StatefulWidget {

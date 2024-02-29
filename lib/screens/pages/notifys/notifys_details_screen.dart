@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
-
 
 class DetailsScreen extends StatefulWidget {
-  final String  image,title,price,description;
-  //final double price;
+  final String image;
+  final String title;
+  final String price;
+  final String description;
+  
     const DetailsScreen({super.key,
     required this.image,
     required this.title,
@@ -19,14 +19,12 @@ class DetailsScreen extends StatefulWidget {
 
 class _DetailsScreenState extends State<DetailsScreen> {
   
-
-//List<Products> products =[];
   @override
   Widget build(BuildContext context) {
-return  Scaffold(
-       appBar: AppBar(
+    return  Scaffold(
+      appBar: AppBar(
         title: const Text(
-            "PRODUCTS",
+          "PRODUCTS",
         ),
       ),
       body:  Padding(
@@ -58,29 +56,29 @@ return  Scaffold(
                 ),
               ),
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Column(
-                children: [
-                  Container(
-                    child: Text(
-                                    widget.price,
-                                    style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic
-                                    ),
-                                  ),
+              children: [
+                Container(
+                  child: Text(
+                    widget.price,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic
+                    ),
                   ),
-                  SizedBox(height: 15,),
-                  Text(
-                                    widget.description,
-                                    style: const TextStyle(
+                ),
+                const SizedBox(height: 15,),
+                Text(
+                  widget.description,
+                  style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.normal,
                     fontStyle: FontStyle.italic
-                                    ),
-                                  ),
-                ],
+                  ),
+                ),
+              ],
             )
           ],
         ),
