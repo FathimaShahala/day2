@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:day2/utils/model.dart';
+import 'package:day2/utils/model_album.dart';
 
 
 class Cart extends StatefulWidget {
@@ -54,8 +54,10 @@ class _CartState extends State<Cart> {
                                     style: TextStyle(fontSize: 14),
                                   ),
                                   Text(
-                                    'title:${album[index].title}',
-                                    style: TextStyle(fontSize: 14),
+                                    album[index].title,
+                                    style: TextStyle(fontSize: 14,
+                                    fontWeight: FontWeight.bold
+                                    ),
                                   ),
                                    ],
                               ),
